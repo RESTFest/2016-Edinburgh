@@ -60,7 +60,7 @@
       <div typeof="Event">
         <meta property="name" content="REST Fest UK 2016" />
         <h1>July 14-16<sup>th</sup></h1>
-        <h3 property="location" typeof="Place">
+        <h3 property="location" typeof="Place" resource="#location">
           <span property="address" typeof="PostalAddress">
             <span property="addressLocality">Edinburgh</span>,
             <span property="addressRegion">Scotland</span>
@@ -95,14 +95,15 @@
       <div class="center aligned row">
         <div class="column" id="map">
         </div>
-        <div class="column" id="address" typeof="Organization">
-          <img src="images/codebase.png" class="ui medium centered image"
-            property="name" content="CodeBase" />
+        <div class="column" id="address" typeof="Place" resource="#location">
+          <meta property="name" content="CodeBase" />
+          <img src="images/codebase.png" class="ui medium centered image" />
           <address property="address" typeof="PostalAddress">
             <div property="name">Argyle House</div>
             <div property="streetAddress">3 Lady Lawson Street</div>
             <div>
               <span property="addressLocality">Edinburgh</span>,
+              <span property="addressRegion">Scotland</span>
               <span property="postalCode">EH3 9DR</span>
             </div>
           </address>
