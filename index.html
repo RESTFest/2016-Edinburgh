@@ -18,9 +18,6 @@
     .ui.primary.button {
       background-color: #A5CB39;
     }
-    #tito {
-      padding: 0;
-    }
     .tito-wrapper {
       margin: 0px;
       height: 100%;
@@ -34,7 +31,7 @@
       background: none;
     }
     #map {
-      min-height: 300px;
+      min-height: 200px;
     }
     div[typeof=Event] h1{
       margin: 0;
@@ -46,7 +43,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
 </head>
-<body>
+<body vocab="http://schema.org/">
 
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
@@ -88,7 +85,7 @@
         REST Fest UK 2016
       </h1>
       <div typeof="Event">
-        <meta property="name" content="REST Fest UK" />
+        <meta property="name" content="REST Fest UK 2016" />
         <h1>July 14-16<sup>th</sup></h1>
         <h3 property="location" typeof="Place">
           <span property="address" typeof="PostalAddress">
@@ -125,8 +122,17 @@
       <div class="center aligned row">
         <div class="column" id="map">
         </div>
-        <div class="column" id="tito">
-          <tito-widget event="rest-fest/rest-fest-uk-2016"></tito-widget>
+        <div class="column" id="address" typeof="Organization">
+          <img src="images/codebase.png" class="ui medium centered image"
+            property="name" content="CodeBase" />
+          <address property="address" typeof="PostalAddress">
+            <div property="name">Argyle House</div>
+            <div property="streetAddress">3 Lady Lawson Street</div>
+            <div>
+              <span property="addressLocality">Edinburgh</span>,
+              <span property="postalCode">EH3 9DR</span>
+            </div>
+          </address>
         </div>
       </div>
     </div>
@@ -193,6 +199,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/visibility.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/sidebar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/transition.min.js"></script>
   <script>
   $(document)
     .ready(function() {
