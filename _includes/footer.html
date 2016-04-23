@@ -42,6 +42,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/visibility.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/sidebar.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/transition.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/tab.min.js"></script>
   <script>
   $(document)
     .ready(function() {
@@ -64,6 +65,7 @@
         .sidebar('attach events', '.toc.item')
       ;
 
+      $('.menu .item').tab();
     })
   ;
   </script>
