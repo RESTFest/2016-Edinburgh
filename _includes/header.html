@@ -1,0 +1,19 @@
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a class="active item">Home</a>
+    <div class="right menu">
+      <div class="item">
+        <tito-button event="rest-fest/rest-fest-uk-2016" class="ui primary button">Register</tito-button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+    {% for p in site.pages %}
+    <a class="item {% if p.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+    {% endfor %}
+</div>
+

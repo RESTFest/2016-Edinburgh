@@ -1,0 +1,21 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: REST Fest UK - RESTful Web Services Unconference in Edinburgh, Scotland - July 14-16
+email: ben@nocarrier.co.uk
+description: > # this means to ignore newlines until "baseurl:"
+REST Fest is an unconference developed by Mike Amundsen and Benjamin Young.
+
+Our objective is to give people interested in REST, Hypermedia APIs, crafting web service APIs, or any related topics a chance to get together in an informal setting to  share ideas, trade  stories, and show examples of current work.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://restfest.org" # the base hostname & protocol for your site
+twitter_username: restfest
+github_username:  restfest
+
+# Build settings
+markdown: kramdown

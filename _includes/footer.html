@@ -1,0 +1,71 @@
+<footer>
+<div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">More REST Fest!</h4>
+          <div class="ui inverted link list">
+            <a href="http://2016.us.restfest.org/" class="item">
+              REST Fest US - Greenville, SC</a>
+            <a href="http://videos.restfest.org/" class="item">Video Project</a>
+            <small>header photo by <a rel="nofollow" href="http://flickr.com/strevs">flickr.com/strevs</a></small>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Past Events</h4>
+          <div class="ui inverted link list">
+            <a href="http://2015.restfest.org/" class="item">2015</a>
+            <a href="http://2014.restfest.org/" class="item">2014</a>
+            <a href="http://2013.restfest.org/" class="item">2013</a>
+            <a href="http://2012.restfest.org/" class="item">2012</a>
+            <a href="http://2011.restfest.org/" class="item">2011</a>
+            <a href="http://2010.restfest.org/" class="item">2010</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">About REST Fest</h4>
+          <p>REST Fest is an unconference developed by <a href="http://mamund.com/">Mike Amundsen</a> and <a href="http://www.bigbluehat.com/">Benjamin Young</a>.</p>
+          <p>Our objective is to give people interested in <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST</a>, <a href="http://en.wikipedia.org/wiki/HATEOAS">Hypermedia APIs</a>, crafting web service APIs, or any related topics a chance to get together in an informal setting to  share ideas, trade  stories, and show examples of current work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.0/vue-resource.min.js"></script>
+
+  <script src='https://js.tito.io/v1' async></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/visibility.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/sidebar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/transition.min.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+  <script src="scripts/map.js"></script>
+</footer>
