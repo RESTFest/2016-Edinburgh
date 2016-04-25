@@ -16,3 +16,6 @@ github_username:  restfest
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-redirect-from
