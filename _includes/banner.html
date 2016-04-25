@@ -4,9 +4,7 @@
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        {% for p in site.pages | sort:"order" %}
-        <a class="item {% if p.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
-        {% endfor %}
+        {% include navigation-items.html %}
         <div class="right item">
           <tito-button event="rest-fest/rest-fest-uk-2016" class="ui inverted button">Register</tito-button>
         </div>
