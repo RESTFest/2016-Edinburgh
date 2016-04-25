@@ -1,4 +1,31 @@
-(function() {
+(function($) {
+  // Semantic-UI setup
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+      $('.tabular.menu .item').tab();
+    })
+  ;
+
+  // Leaflet.js goodness added via Vue.js awesome
   new Vue({
     data: {
       features: {}
@@ -39,4 +66,4 @@
       }
     }
   });
-})();
+})(jQuery);
